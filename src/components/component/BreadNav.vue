@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <el-breadcrumb separator="" class="breadcrumb">
+    <el-breadcrumb separator="/" class="breadcrumb">
 		<el-breadcrumb-item :to="{ path: '/manage' }"></el-breadcrumb-item>
 		<el-breadcrumb-item v-for="(item, index) in $route.meta" :key="index">{{item}}</el-breadcrumb-item>
 	</el-breadcrumb>

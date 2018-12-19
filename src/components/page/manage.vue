@@ -47,7 +47,8 @@
                 <i class="el-icon-picture-outline"></i>
                 <span>商铺管理</span>
               </template>
-              <el-menu-item index="poster">添加商铺</el-menu-item>
+              <el-menu-item index="storeList">商家列表</el-menu-item>
+              <el-menu-item index="store">添加商铺</el-menu-item>
             </el-submenu>
             <el-submenu index=2>
               <template slot="title"><i class="el-icon-goods"></i> <span>商品管理</span> </template>
@@ -96,19 +97,19 @@ export default {
           id: 1,
           name: "海报管理",
           hasChild: true,
-          sub: [{ id: 10, name: "首页海报", link: "/poster" }]
+          sub: [{ id: 10, name: "首页海报", link: "/store" }]
         },
         {
           id: 2,
           name: "商品管理",
           hasChild: false,
-          sub: [{ id: 10, name: "全部商品", link: "/poster" }]
+          sub: [{ id: 10, name: "全部商品", link: "/store" }]
         },
         {
           id: 3,
           name: "订单管理",
           hasChild: false,
-          sub: [{ id: 10, name: "全部订单", link: "/poster" }]
+          sub: [{ id: 10, name: "全部订单", link: "/store" }]
         }
       ],
       editableTabsValue: "2",
@@ -133,7 +134,6 @@ export default {
   },
   computed: {
     defaultActive: function() {
-      console.log("2222222");
       console.log(this.$route.path.replace("/", ""));
       return this.$route.path.replace("/", "");
     }

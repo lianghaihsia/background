@@ -1,6 +1,6 @@
 <template>
     <div>
-        poster
+        store
     </div>
 </template>
 

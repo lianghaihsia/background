@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
-import Poster from '@/components/page/Poster'
+import Store from '@/components/page/Store'
+import StoreList from '@/components/page/StoreList'
 import manage from '@/components/page/manage'
 import Order from '@/components/page/Order'
 import Member from '@/components/page/Member'
@@ -17,11 +18,15 @@ const routes = [{
     path: '/manage',
     name: '',
     component: manage,
-    meta: ['海报管理'],
+    meta: ['用户管理'],
     children: [{
-        path: '/poster',
-        component: Poster,
-        meta: ['海报管理', '首页海报'],
+        path: '/storeList',
+        component: StoreList,
+        meta: ['商品管理', '商家列表'],
+      }, {
+        path: '/store',
+        component: Store,
+        meta: ['商品管理', '添加商铺'],
       }, {
         path: '/order',
         name:Order,
